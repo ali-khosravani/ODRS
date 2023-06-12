@@ -1,3 +1,18 @@
+@font-face {
+    font-family: irsans;
+    src: url("../fonts/irsans-1.ttf");
+}
+@font-face {
+    font-family: irsansbold;
+    src: url(../fonts/IRAN-Sans-Bold.ttf);
+}
+.font-iran{
+    font-family: irsans;
+}
+.font-iran h2{
+    font-family: irsansbold;
+}
+
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
