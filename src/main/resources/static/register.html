@@ -14,7 +14,7 @@
     <!-- Fixed navbar -->
     <div class="container">
         <header class="fixed-top d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-            <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+            <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none" style="margin-right: 50px">
                 <img src="assets/images/medical-logo.jpg" height="50" width="50">
             </a>
 
@@ -27,7 +27,7 @@
                 <li><a href="contact" class="nav-link px-2 link-dark">ارتباط‌با‌ما</a></li>
             </ul>
 
-            <div class="col-md-3 text-end">
+            <div class="col-md-3 text-start">
                 <button type="button" class="btn btn-outline-primary me-2" onclick="window.location.href='login'">ورود</button>
                 <button type="button" class="btn btn-primary" onclick="window.location.href='register'">ثبت نام</button>
             </div>
@@ -39,10 +39,65 @@
 <!-- Begin page content -->
 <main class="flex-shrink-0">
     <div class="container" style="padding-top: 60px">
-        <img class="d-block mx-auto mb-4" src="assets/images/medical-logo.jpg" alt="" width="72" height="57">
-        <h1 class="mt-5">Sticky footer with fixed navbar</h1>
-        <p class="lead">Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code class="small">padding-top: 60px;</code> on the <code class="small">main &gt; .container</code>.</p>
-        <p>Back to <a href="/docs/5.2/examples/sticky-footer/">the default sticky footer</a> minus the navbar.</p>
+        <img class="d-block mx-auto mb-4" src="assets/images/medical-logo.jpg" alt="" width="144" height="144">
+        <form>
+            <div class="row">
+                <div class="col">
+                    <label for="inputName">نام</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="مثلا رضوان">
+                </div>
+                <div class="col">
+                    <label for="inputLastname"></label>
+                    <input type="text" class="form-control" id="inputLastname" placeholder="مثلا ملکی">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="inputEmail4">ایمیل</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="ایمیل">
+                </div>
+                <div class="col">
+                    <label for="inputPassword4">رمز عبور</label>
+                    <input type="password" class="form-control" id="inputPassword4" placeholder="*******">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputAddress">آدرس منزل</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="شهرقدس میدان قدس بلوار کلهر">
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="inputCity">شهر</label>
+                    <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="col">
+                    <label for="inputState">استان</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>تهران</option>
+                        <option>شبراز</option>
+                        <option>اصفهان</option>
+                        <option>سایر</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="inputZip">کد پستی</label>
+                    <input type="text" class="form-control" id="inputZip">
+                </div>
+                <div class="form-group">
+                    <label for="inputIll">سابفه بیماری</label>
+                    <input type="text" class="form-control" id="inputIll" placeholder="سابقه بیماری خاصی ندارم">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                        قوانین سایت را می پذیرم
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">ثبت نام</button>
+        </form>
     </div>
 </main>
 
