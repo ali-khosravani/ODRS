@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="fa" class="h-100" dir="rtl">
+<html lang="fa" class="h-100" dir="rtl" xmlns:th="https://www.thyemleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="assets/bootstrap/bootstrap-5.0.2-dist/css/bootstrap.rtl.css">
+    <link rel="stylesheet" th:href="@{/assets/bootstrap/bootstrap-5.0.2-dist/css/bootstrap.rtl.css}">
     <title>صقحه نخست</title>
 
 </head>
@@ -14,16 +14,16 @@
     <div class="container">
         <header class="fixed-top d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
             <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none" style="margin-right: 50px">
-                <img src="assets/images/medical-logo.jpg" height="50" width="50">
+                <img th:src="@{/assets/images/medical-logo.jpg}" height="50" width="50" alt="image">
             </a>
 
             <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
                 <li><a href="/" class="nav-link px-2 link-secondary">خانه</a></li>
-                <li><a href="reserve" class="nav-link px-2 link-dark">پذیرش</a></li>
-                <li><a href="guide" class="nav-link px-2 link-dark">راهنمای‌پذیرش</a></li>
-                <li><a href="privacy" class="nav-link px-2 link-dark">حریم شخصی</a></li>
-                <li><a href="about" class="nav-link px-2 link-dark">درباره‌ما</a></li>
-                <li><a href="contact" class="nav-link px-2 link-dark">ارتباط‌با‌ما</a></li>
+                <li><a href="/reserve" class="nav-link px-2 link-dark">پذیرش</a></li>
+                <li><a href="/guide" class="nav-link px-2 link-dark">راهنمای‌پذیرش</a></li>
+                <li><a href="/privacy" class="nav-link px-2 link-dark">حریم شخصی</a></li>
+                <li><a href="/about" class="nav-link px-2 link-dark">درباره‌ما</a></li>
+                <li><a href="/contact" class="nav-link px-2 link-dark">ارتباط‌با‌ما</a></li>
             </ul>
 
             <div class="col-md-3 text-start">
@@ -38,7 +38,7 @@
 <!-- Begin page content -->
 <main class="flex-shrink-0">
     <div class="container" style="padding-top: 60px">
-        <img class="d-block mx-auto mb-4" src="assets/images/medical-logo.jpg" alt="" width="72" height="57">
+        <img class="d-block mx-auto mb-4" th:src="@{/assets/images/medical-logo.jpg}" alt="" width="72" height="57">
         <h1 class="mt-5">حریم خصوصی</h1>
         <br>
         <br>

@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thyemleaf.org">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="assets/css/login.css">
-  <link rel="stylesheet" href="assets/bootstrap/bootstrap-5.0.2-dist/css/bootstrap.rtl.css">
+  <link rel="stylesheet" th:href="@{/assets/css/login.css}">
+  <link rel="stylesheet" th:href="@{/assets/bootstrap/bootstrap-5.0.2-dist/css/bootstrap.rtl.css}">
   <title>ورود به سایت</title>
 </head>
 <body class="text-center">
 
 <main class="form-signin w-100 m-auto">
   <form>
-    <img class="d-block mx-auto mb-4" src="assets/images/medical-logo.jpg" alt="" width="72" height="57">
+    <img class="d-block mx-auto mb-4" th:src="@{/assets/images/medical-logo.jpg}" alt="" width="72" height="57">
     <h1 class="h3 mb-3 fw-normal">ورود به سایت</h1>
 
     <div class="form-floating">

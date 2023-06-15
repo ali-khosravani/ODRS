@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="fa" dir="rtl" xmlns:th="https://thyemleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="assets/bootstrap/bootstrap-5.0.2-dist/css/bootstrap.rtl.css">
-    <link rel="stylesheet" href="assets/css/guide.css">
+    <link rel="stylesheet" th:href="@{/assets/bootstrap/bootstrap-5.0.2-dist/css/bootstrap.rtl.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/guide.css}">
     <title>راهنمای پذیرش</title>
 
 </head>
@@ -14,21 +14,21 @@
     <div class="container">
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
             <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-                <img src="assets/images/medical-logo.jpg" height="50" width="50">
+                <img th:src="@{/assets/images/medical-logo.jpg}" height="50" width="50">
             </a>
 
             <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
                 <li><a href="/" class="nav-link px-2 link-secondary">خانه</a></li>
-                <li><a href="reserve" class="nav-link px-2 link-dark">پذیرش</a></li>
-                <li><a href="guide" class="nav-link px-2 link-dark">راهنمای‌پذیرش</a></li>
-                <li><a href="privacy" class="nav-link px-2 link-dark">حریم شخصی</a></li>
-                <li><a href="about" class="nav-link px-2 link-dark">درباره‌ما</a></li>
-                <li><a href="contact" class="nav-link px-2 link-dark">ارتباط‌با‌ما</a></li>
+                <li><a href="/reserve" class="nav-link px-2 link-dark">پذیرش</a></li>
+                <li><a href="/guide" class="nav-link px-2 link-dark">راهنمای‌پذیرش</a></li>
+                <li><a href="/privacy" class="nav-link px-2 link-dark">حریم شخصی</a></li>
+                <li><a href="/about" class="nav-link px-2 link-dark">درباره‌ما</a></li>
+                <li><a href="/contact" class="nav-link px-2 link-dark">ارتباط‌با‌ما</a></li>
             </ul>
 
             <div class="col-md-3 text-end">
-                <button type="button" class="btn btn-outline-primary me-2" onclick="window.location.href='login'">ورود</button>
-                <button type="button" class="btn btn-primary" onclick="window.location.href='register'">ثبت نام</button>
+                <button type="button" class="btn btn-outline-primary me-2" onclick="window.location.href='/login'">ورود</button>
+                <button type="button" class="btn btn-primary" onclick="window.location.href='/register'">ثبت نام</button>
             </div>
         </header>
     </div>
@@ -46,7 +46,7 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="assets/images/slide-1.avif" height="100%" width="100%">
+                    <img th:src="@{/assets/images/slide-1.avif}" height="100%" width="100%">
 
                     <div class="container">
                         <div class="carousel-caption text-start">
@@ -57,7 +57,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/images/pic-2.jpeg" height="500" width="500">
+                    <img th:src="@{/assets/images/pic-2.jpeg}" height="500" width="500">
                     <div class="container">
                         <div class="carousel-caption">
                             <h1>کاهش هزینه</h1>
@@ -98,19 +98,19 @@
             <!-- Three columns of text below the carousel -->
             <div class="row">
                 <div class="col-lg-4">
-                    <img src="assets/images/face-1.jpg" class="bd-placeholder-img rounded-circle" height="140" width="140" >
+                    <img th:src="@{/assets/images/face-1.jpg}" class="bd-placeholder-img rounded-circle" height="140" width="140" >
                     <h2 class="fw-normal">راهنمای ثبت نام</h2>
                     <p>شما با استفاده از منوی ثبت نام می توانید مراحل ثبت نام را به راحتی انجام دهید.تنها اطلاعاتی که از شما خواسته می شود نام کاربری  به صورت ایمیل و یک کلمه عبور حداقل 8 حرفی می باشد</p>
                     <p><a class="btn btn-secondary" href="#">بیشتر بدانید</a></p>
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4">
-                    <img src="assets/images/face-2.jpeg" class="bd-placeholder-img rounded-circle" height="140" width="140">
+                    <img th:src="@{/assets/images/face-2.jpeg}" class="bd-placeholder-img rounded-circle" height="140" width="140">
                     <h2 class="fw-normal">دریافت ویزیت</h2>
                     <p>برای دریافت ویزیت و انتخاب دکتر از گزینه منوی پذیرش را انتخاب نموده و سپس از دسته بندی های مربوطه نام دکتر خود را انتخاب کنید.</p>
                     <p><a class="btn btn-secondary" href="#">بیشتر بدانید</a></p>
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4">
-                    <img src="assets/images/face-3.jpeg" class="bd-placeholder-img rounded-circle" height="140" width="140">
+                    <img th:src="@{/assets/images/face-3.jpeg}" class="bd-placeholder-img rounded-circle" height="140" width="140">
                     <h2 class="fw-normal">دسترسی به سوابق</h2>
                     <p>با ورود با نام کاربری خود می توانید از سوابق پزشکی خود اطلاع یافته و در صورت نیاز آن را برای دکتر خود ارسال نماپید تا در جریان درمان شما قرار بگیرد.
                     همچنین این اطلاعات به صورت محرمانه نزد شما و پزشک معالج شما قرار خواهد گرفت.</p>
@@ -130,7 +130,7 @@
                     زدن ماسک مخصوصا در مناطق سرپوشیده را نباید فراموشی کنیم.و باید بدانیم بهترین راه مبارزه با بیماری همه گیر کرونا پیشگیری می باشد.</p>
                 </div>
                 <div class="col-md-5">
-                    <img src="assets/images/pic-2.jpeg" height="500" width="500">
+                    <img th:src="@{/assets/images/pic-2.jpeg}" height="500" width="500">
                 </div>
             </div>
 
@@ -142,7 +142,7 @@
                     <p class="lead">هیچگاه نباید دارو به صورت خودسرانه مصرف شود و باید همیشه زیر نظر دکتر متخصص باشد.در سیستم رزرو آنلاین 247365سلامتی شما مهمترین اولویت کاری ما می باشد.</p>
                 </div>
                 <div class="col-md-5 order-md-1">
-                    <img src="assets/images/pic-1.jpg" height="500" width="500">
+                    <img th:src="@{/assets/images/pic-1.jpg}" height="500" width="500">
                 </div>
             </div>
 
@@ -154,7 +154,7 @@
                     <p class="lead">مجله پذیرش آنلاین 247365 جدیدترین مطالب حوزه پزشکی را برای شما به ارمغان می آورد.با ما به بروزترین اخبار دسترسی خواهید داشت.</p>
                 </div>
                 <div class="col-md-5">
-                    <img src="assets/images/pic-3.webp" height="500" width="500">
+                    <img th:src="@{/assets/images/pic-3.webp}" height="500" width="500">
                 </div>
             </div>
 
