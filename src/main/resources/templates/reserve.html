@@ -39,10 +39,21 @@
 <!-- Begin page content -->
 <main class="flex-shrink-0">
     <div class="container" style="padding-top: 60px">
-        <img class="d-block mx-auto mb-4" src="../static/assets/images/medical-logo.jpg" alt="" width="72" height="57">
-        <h1 class="mt-5">Sticky footer with fixed navbar</h1>
-        <p class="lead">Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code class="small">padding-top: 60px;</code> on the <code class="small">main &gt; .container</code>.</p>
-        <p>Back to <a href="/docs/5.2/examples/sticky-footer/">the default sticky footer</a> minus the navbar.</p>
+        <img class="d-block mx-auto mb-4" th:src="@{/assets/images/medical-logo.jpg}" alt="" width="72" height="57">
+        <table class="table table-bordered table-striped">
+            <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="section:${sections}">
+                <td th:text="${section.id}"/>
+                <td th:text="${section.name}"/>
+            </tr>
+            </tbody>
+        </table>
     </div>
 </main>
 

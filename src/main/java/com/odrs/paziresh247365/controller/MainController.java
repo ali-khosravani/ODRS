@@ -1,6 +1,9 @@
 package com.odrs.paziresh247365.controller;
 
+import com.odrs.paziresh247365.repository.SectionRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -26,10 +29,12 @@ public class MainController {
         return modelAndView;
     }
 
-    @RequestMapping("/reserve")
-    public ModelAndView reserve(){
-        ModelAndView modelAndView=new ModelAndView();
-        modelAndView.setViewName("reserve");
+    @Autowired
+    private SectionRepository sectionRepository;
+    @GetMapping("/reserve")
+    public ModelAndView getAllSection(){
+        ModelAndView modelAndView=new ModelAndView("reserve");
+        modelAndView.addObject("sections" , sectionRepository.findAll());
         return modelAndView;
     }
 
