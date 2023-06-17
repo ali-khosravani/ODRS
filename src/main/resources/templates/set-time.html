@@ -43,24 +43,24 @@
         <table class="table table-bordered table-striped">
             <thead>
             <tr>
-                <th>کد بخش</th>
-                <th>نام بخش</th>
+                <th>کد پذیرش</th>
+                <th>زمان رزرو</th>
                 <th>انتخاب</th>
+
             </tr>
             </thead>
             <tbody>
-            <tr th:if="${sections.empty}">
-                <td colspan="2">No Data</td>
+            <tr th:if="${times.empty}">
+                <td colspan="3">No Data</td>
             </tr>
-            <tr th:each="section:${sections}">
-                <td th:text="${section.id}"/>
-                <td th:text="${section.name}"/>
-                <td><a th:href="@{/doctor-list/{id}(id=${section.id})}" class="btn btn-primary">انتخاب بخش</a></td>
+            <tr th:each="time:${times}">
+                <td th:text="${time.id}"/>
+                <td th:text="${time.time}"/>
+                <td><a th:href="@{/result}" class="btn btn-primary">انتخاب نهایی</a> </td>
             </tr>
-
             </tbody>
         </table>
-        <input type="button" onclick="window.location.href='/'" value="برگشت" class="btn btn-danger">
+        <input type="button" onclick="window.location.href='/reserve'" value="برگشت" class="btn btn-danger">
     </div>
 </main>
 
