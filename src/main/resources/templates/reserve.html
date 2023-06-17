@@ -43,14 +43,16 @@
         <table class="table table-bordered table-striped">
             <thead>
             <tr>
-                <th>id</th>
-                <th>name</th>
+                <th>کد بخش</th>
+                <th>نام بخش</th>
+                <th>انتخاب</th>
             </tr>
             </thead>
             <tbody>
             <tr th:each="section:${sections}">
                 <td th:text="${section.id}"/>
                 <td th:text="${section.name}"/>
+                <td><input type="checkbox" th:value="${section.id}" name="section-id"></td>
             </tr>
             </tbody>
         </table>
